@@ -1,4 +1,4 @@
-import 'dart:io';
+
 class Person{
   String fullName;
   String phoneNumber;
@@ -51,33 +51,3 @@ class Employee extends Person{
 
 }
 
-void main(){
-
-  Function createSummator(int base){
-    return (int i)=>i+base;
-  }
-
-  var a = createSummator(7);
-  print(a(5));
-
-
-  var object;
-  object??=Person(fullName: 'Ivanna Karaim');
-  object??=Person(fullName: 'Bohdan Karaim');
-
-  print('Введіть вулицю:');
-  String? input = stdin.readLineSync();
-
-
-  print('Введіть будинок:');
-  int? house = int.parse(stdin.readLineSync() as String);
-
-
-  object
-    ..setAddress(input)
-    ..setAddress(house);
-
-
-  print(object?.printLaba2());
-
-}

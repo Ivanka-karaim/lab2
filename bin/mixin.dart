@@ -1,22 +1,6 @@
-mixin Creature {
-  void info() {
-    print('Creature...');
-  }
-}
-
-class Person with Creature {
-  String fullName;
-
-  Person(this.fullName);
-
-  void getName() {
-    print('$fullName...');
-  }
-}
-
+import 'package:lab2/mixin.dart' as mix;
 void main(){
-  var person = Person('Ivanna Karaim');
+  var person = mix.Person('Ivanna Karaim');
   person.getName();
   person.info();
-
 }
